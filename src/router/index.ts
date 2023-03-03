@@ -13,7 +13,32 @@ const routes: Array<RouteRecordRaw> = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () =>
+      import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+  },
+  {
+    path: '/databinding',
+    name: 'DataBindingView',
+    component: () =>
+      import(
+        /* webpackChunkName : "databinding" */ '../views/1_databinding/DataBindingView.vue'
+      )
+  },
+  {
+    path: '/databindingselect',
+    name: 'DataBindingSelectView',
+    component: () =>
+      import(
+        /* webpackChunkName : "databinding" */ '../views/1_databinding/DataBindingSelectView.vue'
+      )
+  },
+  {
+    path: '/attr',
+    name: 'DataBindingAttributeView',
+    component: () =>
+      import(
+        /* webpackChunkName : "databinding" */ '../views/1_databinding/DataBindingAttributeView.vue'
+      )
   }
 ]
 
