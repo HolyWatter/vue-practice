@@ -34,11 +34,21 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/attr',
-    name: 'DataBindingAttributeView',
+    name: 'DataBindingAttrView',
     component: () =>
       import(
-        /* webpackChunkName : "databinding" */ '../views/1_databinding/DataBindingAttributeView.vue'
+        /* webpackChunkName : "attr" */ '../views/1_databinding/DataBindingAttrView.vue'
       )
+  },
+  {
+    path: '/style',
+    name: 'DataBindingStyleView',
+    component: () => import('../views/1_databinding/DataBindingStyleView.vue')
+  },
+  {
+    path: '/login',
+    name: 'LoginView',
+    component: () => import('../views/event/LoginView.vue')
   }
 ]
 
