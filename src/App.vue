@@ -1,12 +1,16 @@
 <template>
   <NavBar />
-  <router-view />
+  <router-view class="page"></router-view>
 </template>
 <script>
 import NavBar from '@/components/nav/NavBar.vue'
+
 export default {
-  components: {
-    NavBar
-  }
+  components: { NavBar }
 }
 </script>
+<style scoped>
+.page {
+  padding-top: 70px;
+}
+</style>
