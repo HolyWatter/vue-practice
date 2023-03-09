@@ -2,17 +2,13 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-RUN npm install -g serve
+COPY package.json ./
 
-COPY package.json .
-
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 COPY . .
 
 EXPOSE 8000
 
-RUN npm run build
-
-CMD ["serve -s dist"]
+CMD ["npm", "run", "serve"]
 
